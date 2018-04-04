@@ -1,0 +1,300 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="static/js/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" href="static/js/animate.min.css">
+  <script src="static/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+  body {
+    /*font-family: Helvetica;*/
+
+  }
+
+  #home {
+    height:100%;
+    width: 100%;
+    background-image: url(static/images/hwsky.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:white;
+  }
+
+  .child {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+  }
+
+  .childtwolg {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -30%);
+  }
+
+  .childtwomd {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -40%);
+  }
+
+  .childtwosm {
+    position: absolute;
+    width:100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .nobr { white-space: nowrap }
+
+  .section {
+    padding-top:56;
+  }
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="padding-bottom:0;">
+      <img src="static/images/tedxhwlogo.png" height="35" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" onclick="goTo('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="goTo('personnel')">Personnel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="goTo('logistics')">Logistics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="goTo('tickets')">Tickets</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id=home class=animated>
+    <div class=childtwosm id=titletext>
+      <b style="font-size:50">Expand your Horizons</b>
+      <h4>Sunday, April 22</h4>
+      <br>
+      <p id=secondaryLinks><a style="display: inline; color: white; padding-left:0;" class="nav-link" href="#" onclick="goTo('personnel')">Personnel</a> | <a style="display: inline; color: white;" class="nav-link" href="#" onclick="goTo('logistics')">Logistics</a> | <a style="display: inline; color: white; padding-right:0;" class="nav-link" href="#" onclick="goTo('tickets')">Tickets</a></p>
+    </div>
+  </div>
+  <div id=personnel class="container section animated">
+    <h1>Personnel</h1>
+    <div class=row>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="static/images/johnkang.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">John Kang</h5>
+            <p class="card-text">John Kang is the CEO of HOMESIDEKICK, a real estate platform built on blockchain technology, and is a founding member of UCLA's blockchain lab, a research facility empowering companies with developments in blockchain technology.</p>
+            <a href="https://www.linkedin.com/in/john-kang/" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="static/images/nanxiliu.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Nanxi Liu</h5>
+            <p class="card-text">Nanxi Liu is the CEO of Enplug, the #1 open software for digital displays. Their software is used around the world including malls, stadiums, corporate offices, restaurants, hotels, and banks.</p>
+            <a href="https://www.linkedin.com/in/nanxi" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id=logistics class="container section animated">
+    <h1>Logistics</h1>
+    <div class=row>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+        <div class=child>
+          <center>
+            <p>Saturday, April 22, 2018</p>
+            <p><address>Harvard-Westlake School<br>3700 Coldwater Canyon<br>Studio City, CA 91604</address></p>
+          </center>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105736.00897027098!2d-118.50185280521464!3d34.08872830951235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bdf25d766bff%3A0x5be9c9b9b2324a7f!2sHarvard-Westlake+Upper+School!5e0!3m2!1sen!2sus!4v1522774042121" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div id=tickets class="container section animated">
+    <h1>Tickets</h1>
+    <p>Please request tickets using this form and we will respond shortly.</p>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" id=invalidAlert>
+      Please enter a valid <strong id=validfield></strong>.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id=failalert>
+      That request didn't work. Please try again.
+    </div>
+    <div class="alert alert-success" role="alert" id=successalert>
+      <h4 class="alert-heading">Response Received!</h4>
+      <p>Thanks for the interest! We will reach out to you shortly.</p>
+      <hr>
+      <button type="button" class="btn btn-success" onclick="submitAgain()">Submit Another Request</button>
+    </div>
+    <div>
+    <form id="ticketform">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstname">First Name</label>
+          <input type="text" class="form-control" id="firstname" placeholder="Jane">
+          <div class="invalid-feedback">
+            Please enter your first name.
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastname">Last Name</label>
+          <input type="text" class="form-control" id="lastname" placeholder="Doe">
+          <div class="invalid-feedback">
+            Please enter your last name.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-lg-10 col-md-9 col-xs-12">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="janedoe@hwemail.com">
+          <div class="invalid-feedback">
+            Please enter a valid email.
+          </div>
+        </div>
+        <div class="form-group col-lg-2 col-md-3 col-xs-12">
+          <label for="numtix">Number of Tickets</label>
+          <input type="number" class="form-control" id="numtix" placeholder="1">
+          <div class="invalid-feedback">
+            Please enter a number.
+          </div>
+        </div>
+      </div>
+      <button id=ticketFormSubmit onclick="ticketRequest()" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDY7UlpeHOeRjbPUNRVLqCvUM4OQDqP93k",
+    authDomain: "tedxhw.firebaseapp.com",
+    databaseURL: "https://tedxhw.firebaseio.com",
+    projectId: "tedxhw",
+    storageBucket: "",
+    messagingSenderId: "197754436026"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+  function ticketRequest() {
+    if($("#firstname").val() == "") {
+      $("#validfield").html("first name");
+      $('#invalidAlert').show();
+    }
+    else if($("#lastname").val() == "") {
+      $("#validfield").html("last name");
+      $('#invalidAlert').show();
+    }
+    else if($("#email").val() == "") {
+      $("#validfield").html("email");
+      $('#invalidAlert').show();
+    }
+    else if($("#numtix").val() == "") {
+      $("#validfield").html("number of tickets");
+      $('#invalidAlert').show();
+    } else {
+      $('#invalidAlert').hide();
+      var data = {
+        firstName: $("#firstname").val(),
+        lastName: $("#lastname").val(),
+        email: $("#email").val(),
+        numtix: $("#numtix").val()
+      }
+      $("#ticketform").hide();
+      var database = firebase.database().ref("tickets").push(data, function(error) {
+        if(error == null) {
+          $("#successalert").show();
+        } else {
+          $("#failalert").show();
+          $("#ticketform").show();
+        }
+      });
+    }
+  }
+
+  function submitAgain() {
+    $("#firstname").val("");
+    $("#lastname").val("");
+    $("#email").val("");
+    $("#numtix").val("");
+    $("#successalert").hide();
+    $("#ticketform").show();
+  }
+
+  $("form").submit(function(e){
+        e.preventDefault();
+  });
+
+  function resizeAddressElement () {
+    $("#titletext").attr("class", "childtwosm");
+    $("#secondaryLinks").show();
+    if($(window).width()>=576) {
+      $("#titletext").attr("class", "childtwomd");
+    }
+    if ($(window).width()>=850) {
+      $("#titletext").attr("class", "childtwolg");
+      $("#secondaryLinks").hide();
+    }
+
+    if($(window).width()>=576) {
+      $('.child').css("height", "50%");
+    }  else {
+      $('.child').css("height", "150px");
+    }
+  }
+  $(document).ready(function () {
+    resizeAddressElement();
+    $('#invalidAlert').hide();
+    $("#successalert").hide();
+    $("#failalert").hide();
+    $("#tickets").hide();
+    $("#personnel").hide();
+    $("#logistics").hide();
+  });
+
+  function goTo(page) {
+    $("#home").removeClass( "fadeIn" ).addClass( "fadeOut" );
+    $("#tickets").removeClass( "fadeIn" ).addClass( "fadeOut" );
+    $("#personnel").removeClass( "fadeIn" ).addClass( "fadeOut" );
+    $("#logistics").removeClass( "fadeIn" ).addClass( "fadeOut" );
+    setTimeout(function () {
+      $("#home").hide();
+      $("#tickets").hide();
+      $("#personnel").hide();
+      $("#logistics").hide();
+      $("#"+page).show();
+      $("#"+page).removeClass( "fadeOut" ).addClass( "fadeIn" );;
+    }, 1000);
+    
+  }
+  $(window).resize( function(){
+    resizeAddressElement();
+  });
+</script>
