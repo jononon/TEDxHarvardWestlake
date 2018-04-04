@@ -73,7 +73,7 @@
           <a class="nav-link" href="#" onclick="goTo('home')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="goTo('personnel')">Personnel</a>
+          <a class="nav-link" href="#" onclick="goTo('personnel')">Speakers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="goTo('logistics')">Logistics</a>
@@ -93,7 +93,7 @@
     </div>
   </div>
   <div id=personnel class="container section animated">
-    <h1>Personnel</h1>
+    <h1>Speakers</h1>
     <div class=row>
       <div class="col-12 col-sm-6 col-md-6 col-lg-3">
         <div class="card">
@@ -115,6 +115,26 @@
           </div>
         </div>
       </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="static/images/samteller.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Sam Teller</h5>
+            <p class="card-text">Sam is an associate of Elon Musk and is the director of SpaceX, Tesla, and the Boring Company. He also has created a nonprofit to help create and promote safe AI as a way to benefit humanity as a whole.</p>
+            <a href="https://www.linkedin.com/in/steller/" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="static/images/janebuckingham.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jane Buckingham</h5>
+            <p class="card-text">Jane is the presendent of Tendera, a marketing firm specializing in trend forecasting, brand strategy, and generational research. She also is a contributing editor for Glamour, Cosmopolitan, and Seventeen magazines.</p>
+            <a href="https://www.linkedin.com/in/jane-buckingham-995652a/" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div id=logistics class="container section animated">
@@ -123,7 +143,8 @@
       <div class="col-12 col-sm-6 col-md-6 col-lg-6">
         <div class=child>
           <center>
-            <p>Saturday, April 22, 2018</p>
+            <p>Saturday, April 22, 2018, 10 AM - 1 PM</p>
+            <p>Rugby Auditorium</p>
             <p><address>Harvard-Westlake School<br>3700 Coldwater Canyon<br>Studio City, CA 91604</address></p>
             <p><address>Inquiries should be sent to Nicky Belgrad, <a href=mailto:nbelgrad1@hwemail.com>nbelgrad1@hwemail.com</a></address></p>
           </center>
@@ -186,6 +207,12 @@
           </div>
         </div>
       </div>
+      <div class="form-row">
+        <div class="form-check col-lg-11 col-md-11 col-xs-11" style="margin-left:20">
+          <input type="checkbox" class="form-check-input" id="hwconnection">
+          <label class="form-check-label" for="hwconnection">Check if you have a connection to HW</label>
+        </div>
+      </div>
       <button id=ticketFormSubmit onclick="ticketRequest()" class="btn btn-primary">Submit</button>
     </form>
   </div>
@@ -226,7 +253,8 @@
         firstName: $("#firstname").val(),
         lastName: $("#lastname").val(),
         email: $("#email").val(),
-        numtix: $("#numtix").val()
+        numtix: $("#numtix").val(),
+        hwconnection: $("#hwconnection").is(':checked')
       }
       $("#ticketform").hide();
       var database = firebase.database().ref("tickets").push(data, function(error) {

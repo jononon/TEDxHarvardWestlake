@@ -25,11 +25,11 @@
 	var ref = firebase.database().ref('tickets');
 	ref.on('value', function(snapshot) {
 	  var tickets = snapshot.val();
-	  var table = "<table class=\"table\"><thead><tr><th scope=\"col\">First Name</th><th scope=\"col\">Last Name</th><th scope=\"col\">Email</th><th scope=\"col\">Tickets Requested</th></tr></thead><tbody>";
+	  var table = "<table class=\"table\"><thead><tr><th scope=\"col\">First Name</th><th scope=\"col\">Last Name</th><th scope=\"col\">Email</th><th scope=\"col\">Tickets Requested</th><th>HW Connection?</th></tr></thead><tbody>";
 	  for (var key in tickets) {
 	    ticket = tickets[key];
 	    console.log(ticket);
-	    table+="<tr><th>"+ticket.firstName+"</th><th>"+ticket.lastName+"</th><th><a href=\"mailto:"+ticket.email+"\">"+ticket.email+"</a></th><th>"+ticket.numtix+"</th></tr>";
+	    table+="<tr><th>"+ticket.firstName+"</th><th>"+ticket.lastName+"</th><th><a href=\"mailto:"+ticket.email+"\">"+ticket.email+"</a></th><th>"+ticket.numtix+"</th><th>"+(ticket.hwconnection?"Yes":"No")+"</th></tr>";
 	  }
 	  table+="</tbody></table>";
 	  $("#main").html(table);
