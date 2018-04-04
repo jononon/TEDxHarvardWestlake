@@ -1,0 +1,37 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="static/js/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" href="static/js/animate.min.css">
+  <script src="static/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+</head>
+<body id=main>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDY7UlpeHOeRjbPUNRVLqCvUM4OQDqP93k",
+    authDomain: "tedxhw.firebaseapp.com",
+    databaseURL: "https://tedxhw.firebaseio.com",
+    projectId: "tedxhw",
+    storageBucket: "",
+    messagingSenderId: "197754436026"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+	var ref = firebase.database().ref('tickets');
+	ref.on('value', function(snapshot) {
+	  var tickets = snapshot.val();
+	  var table = "<table class=\"table\"><thead><tr><th scope=\"col\">First Name</th><th scope=\"col\">Last Name</th><th scope=\"col\">Email</th><th scope=\"col\">Tickets Requested</th></tr></thead><tbody>";
+	  for (var key in tickets) {
+	    ticket = tickets[key];
+	    console.log(ticket);
+	    table+="<tr><th>"+ticket.firstName+"</th><th>"+ticket.lastName+"</th><th><a href=\"mailto:"+ticket.email+"\">"+ticket.email+"</a></th><th>"+ticket.numtix+"</th></tr>";
+	  }
+	  table+="</tbody></table>";
+	  $("#main").html(table);
+	});
+</script>
