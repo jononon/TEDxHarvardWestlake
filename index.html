@@ -76,6 +76,9 @@
           <a class="nav-link" href="#" onclick="goTo('personnel')">Speakers</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#" onclick="goTo('team')">Team</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#" onclick="goTo('logistics')">Logistics</a>
         </li>
         <li class="nav-item">
@@ -95,6 +98,16 @@
   <div id=personnel class="container section animated">
     <h1>Speakers</h1>
     <div class=row>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3" style="padding-top:20px;">
+        <div class="card">
+          <img class="card-img-top" src="static/images/janebuckingham.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jane Buckingham</h5>
+            <p class="card-text">Jane is the presendent of Tendera, a marketing firm specializing in trend forecasting, brand strategy, and generational research. She also is a contributing editor for Glamour, Cosmopolitan, and Seventeen magazines.</p>
+            <a href="https://www.linkedin.com/in/jane-buckingham-995652a/" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-3" style="padding-top:20px;">
         <div class="card">
           <img class="card-img-top" src="static/images/johnkang.jpeg" alt="Card image cap">
@@ -117,21 +130,11 @@
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-3" style="padding-top:20px;">
         <div class="card">
-          <img class="card-img-top" src="static/images/samteller.jpeg" alt="Card image cap">
+          <img class="card-img-top" src="static/images/lauriesandell.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Sam Teller</h5>
-            <p class="card-text">Sam is an associate of Elon Musk and is the director of SpaceX, Tesla, and the Boring Company. He also has created a nonprofit to help create and promote safe AI as a way to benefit humanity as a whole.</p>
-            <a href="https://www.linkedin.com/in/steller/" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-3" style="padding-top:20px;">
-        <div class="card">
-          <img class="card-img-top" src="static/images/janebuckingham.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Jane Buckingham</h5>
-            <p class="card-text">Jane is the presendent of Tendera, a marketing firm specializing in trend forecasting, brand strategy, and generational research. She also is a contributing editor for Glamour, Cosmopolitan, and Seventeen magazines.</p>
-            <a href="https://www.linkedin.com/in/jane-buckingham-995652a/" class="btn btn-primary">Learn More</a>
+            <h5 class="card-title">Laurie Sandell</h5>
+            <p class="card-text">Laurie Sandell is a contributing editor at Glamour, where she writes cover stories, features, and personal essays. She has also written for Esquire, GQ, New York and In Style, among others.</p>
+            <a href="https://www.linkedin.com/in/laurie-sandell-3751325/" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
@@ -140,8 +143,18 @@
           <img class="card-img-top" src="static/images/lisasee.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Lisa See</h5>
-            <p class="card-text">Lisa See is an American writer and novelist. Her books have made it to the New York Times bestseller list. And she has received honorable mentions from the Asian/Pacific American Awards for Literature.</p>
+            <p class="card-text">Lisa See is an award winning New York Times bestselling author of Shanghai Girls, the Snow Flower and the Secret Fan, Peony in Love, and China Dolls.</p>
             <a href="http://www.lisasee.com/" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3" style="padding-top:20px;">
+        <div class="card">
+          <img class="card-img-top" src="static/images/samteller.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Sam Teller</h5>
+            <p class="card-text">Sam is an associate of Elon Musk and is the director of SpaceX, Tesla, and the Boring Company. He also has created a nonprofit to help create and promote safe AI as a way to benefit humanity as a whole.</p>
+            <a href="https://www.linkedin.com/in/steller/" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
@@ -184,47 +197,103 @@
       <button type="button" class="btn btn-success" onclick="submitAgain()">Submit Another Request</button>
     </div>
     <div>
-    <form id="ticketform">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="firstname">First Name</label>
-          <input type="text" class="form-control" id="firstname" placeholder="Jane">
-          <div class="invalid-feedback">
-            Please enter your first name.
+      <form id="ticketform">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" placeholder="Jane">
+            <div class="invalid-feedback">
+              Please enter your first name.
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Doe">
+            <div class="invalid-feedback">
+              Please enter your last name.
+            </div>
           </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="lastname">Last Name</label>
-          <input type="text" class="form-control" id="lastname" placeholder="Doe">
-          <div class="invalid-feedback">
-            Please enter your last name.
+        <div class="form-row">
+          <div class="form-group col-lg-10 col-md-9 col-xs-12">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="janedoe@hwemail.com">
+            <div class="invalid-feedback">
+              Please enter a valid email.
+            </div>
           </div>
+          <div class="form-group col-lg-2 col-md-3 col-xs-12">
+            <label for="numtix">Number of Tickets</label>
+            <input type="number" class="form-control" id="numtix" placeholder="1">
+            <div class="invalid-feedback">
+              Please enter a number.
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-check col-lg-11 col-md-11 col-xs-11" style="margin-left:20">
+            <input type="checkbox" class="form-check-input" id="hwconnection">
+            <label class="form-check-label" for="hwconnection">Check if you have a connection to HW</label>
+          </div>
+        </div>
+        <button id=ticketFormSubmit onclick="ticketRequest()" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div id=team class="container section animated">
+    <h1>Team</h1>
+    <div class="media">
+      <img class="mr-3 align-self-center" src="static/images/nickybelgrad.jpeg" style="height:62px;width:62px;">
+      <div class="media-body">
+        <h5 class="mt-0">Nicky Belgrad <small class="text-muted">Founder and Head Organizer, Class of 2019</small></h5>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-secondary" onclick="window.open('mailto:nbelgrad1@hwemail.com','email');">Contact</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://www.linkedin.com/in/nicky-belgrad-490b28154/';">LinkedIn</button>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group col-lg-10 col-md-9 col-xs-12">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="janedoe@hwemail.com">
-          <div class="invalid-feedback">
-            Please enter a valid email.
-          </div>
-        </div>
-        <div class="form-group col-lg-2 col-md-3 col-xs-12">
-          <label for="numtix">Number of Tickets</label>
-          <input type="number" class="form-control" id="numtix" placeholder="1">
-          <div class="invalid-feedback">
-            Please enter a number.
-          </div>
+    </div>
+    <br>
+    <div class="media">
+      <img class="mr-3 align-self-center" src="static/images/larryklein.jpg" style="height:62px;width:62px;">
+      <div class="media-body">
+        <h5 class="mt-0">Laurence Klein <small class="text-muted">Faculty Advisor</small></h5>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-secondary" onclick="window.open('mailto:lklein@hw.com','email');">Contact</button>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-check col-lg-11 col-md-11 col-xs-11" style="margin-left:20">
-          <input type="checkbox" class="form-check-input" id="hwconnection">
-          <label class="form-check-label" for="hwconnection">Check if you have a connection to HW</label>
+    </div>
+    <br>
+    <div class="media">
+      <img class="mr-3 align-self-center" src="static/images/jonathandamico.jpeg" style="height:62px;width:62px;">
+      <div class="media-body">
+        <h5 class="mt-0">Jonathan Damico <small class="text-muted">Web Designer, Class of 2019</small></h5>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-secondary" onclick="window.open('mailto:jdamico1@hwemail.com','email');">Contact</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://www.linkedin.com/in/jonathandamico/';">LinkedIn</button>
         </div>
       </div>
-      <button id=ticketFormSubmit onclick="ticketRequest()" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
+    <br>
+    <div class="media">
+      <img class="mr-3 align-self-center" src="static/images/matthewgross.jpeg" style="height:62px;width:62px;">
+      <div class="media-body">
+        <h5 class="mt-0">Matthew Gross <small class="text-muted">Assistant Organizer, Class of 2019</small></h5>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-secondary" onclick="window.open('mailto:mgross1@hwemail.com','email');">Contact</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="media">
+      <img class="mr-3 align-self-center" src="static/images/emmanuelzilber.jpeg" style="height:62px;width:62px;">
+      <div class="media-body">
+        <h5 class="mt-0">Emmanuel Zilber <small class="text-muted">Assistant Organizer, Class of 2019</small></h5>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-secondary" onclick="window.open('mailto:ezilber1@hwemail.com','email');">Contact</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://www.linkedin.com/in/ACoAACVYtFgBPxvKns-F1gfGEmuJj67b66mNJ78/';">LinkedIn</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -323,11 +392,13 @@
     $("#tickets").removeClass( "fadeIn" ).addClass( "fadeOut" );
     $("#personnel").removeClass( "fadeIn" ).addClass( "fadeOut" );
     $("#logistics").removeClass( "fadeIn" ).addClass( "fadeOut" );
+    $("#team").removeClass( "fadeIn" ).addClass( "fadeOut" );
     setTimeout(function () {
       $("#home").hide();
       $("#tickets").hide();
       $("#personnel").hide();
       $("#logistics").hide();
+      $("#team").hide();
       $("#"+page).show();
       $("#"+page).removeClass( "fadeOut" ).addClass( "fadeIn" );;
     }, 1000);
